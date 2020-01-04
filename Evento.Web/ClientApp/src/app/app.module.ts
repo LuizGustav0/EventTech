@@ -7,16 +7,20 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { PalestrantesComponent } from './palestrantes/palestrantes.component';
+import { ProgramacaoComponent } from './programacao/programacao.component';
+import { FooterComponent } from './footer/footer.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    CounterComponent,
-    FetchDataComponent
+    PalestrantesComponent,
+    ProgramacaoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -24,8 +28,9 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'palestrantes', component: PalestrantesComponent },
+      { path: 'programacao', component: ProgramacaoComponent },
+      { path: 'footer', component: FooterComponent },
     ])
   ],
   providers: [],
