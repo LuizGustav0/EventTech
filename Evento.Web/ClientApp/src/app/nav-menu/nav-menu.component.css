@@ -4,6 +4,12 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+.main-menu ul li a {
+  color:#ffffff;
+  text-decoration:solid;
+}
+
+
 html {
   font-size: 14px;
 }

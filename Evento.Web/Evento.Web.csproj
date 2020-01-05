@@ -25,17 +25,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="ClientApp\src\app\footer\footer.component.ts" />
-    <None Remove="ClientApp\src\app\fotos\fotos.component.ts" />
-    <None Remove="ClientApp\src\app\palestrantes\palestrantes.component.ts" />
-    <None Remove="ClientApp\src\app\programacao\programacao.component.ts" />
+    <None Remove="ClientApp\src\app\inscricao\inscricao.component.ts" />
+    <None Remove="ClientApp\src\app\modelo\convidado.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\src\app\footer\footer.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\fotos\fotos.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\palestrantes\palestrantes.component.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\programacao\programacao.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\inscricao\inscricao.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\convidado.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\servicos\convidado\" />
+    <Folder Include="ClientApp\src\assets\forms\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

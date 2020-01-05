@@ -12,7 +12,7 @@
                 Bootcamp <br>
                 2020
               </h3>
-              <a href="#" class="boxed-btn-white">Inscreva-se</a>
+              <a [routerLink]='["/inscricao"]' class="boxed-btn-white">Inscreva-se</a>
             </div>
           </div>
         </div>
@@ -26,24 +26,19 @@
         <div class="col-xl-4 col-md-6 col-lg-4">
           <div class="single_date">
             <i class="ti-location-pin"></i>
-            <span>City Hall, São Paulo</span>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 col-lg-3">
-          <div class="single_date">
+            <span>City Hall, São Paulo</span><br />
             <i class="ti-alarm-clock"></i>
-            <span>20 e 21 Dez 2020</span>
+            <span>20 e 21 Dez 2020</span><br />
+            <h4 id="clocktime" style="color:#ffffff;"></h4>
           </div>
         </div>
-
-        <div class="col-xl-5 col-md-12 col-lg-5">
-          <span id="clock"></span>
-        </div>
-
+   
       </div>
     </div>
   </div>
 </div>
+
+
 <!-- slider_area_end -->
 <!-- about_area_start -->
 <div class="about_area">
@@ -82,3 +77,270 @@
   </div>
 </div>
 <!-- about_area_end -->
+<!-- speakers_start -->
+<div class="speakers_area" id="palestrantes">
+  <h1 class="horizontal_text d-none d-lg-block">
+    Palestrantes
+  </h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="serction_title_large mb-95">
+          <h3>
+            Palestrantes
+          </h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-5 col-md-6">
+        <div class="single_speaker">
+          <div class="speaker_thumb">
+            <img src="../assets/img/speakers/1.png" alt="">
+            <div class="hover_overlay">
+              <div class="social_icon">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="speaker_name text-center">
+            <h3>Palestrante</h3>
+            <p>Developer</p>
+          </div>
+        </div>
+        <div class="single_speaker">
+          <div class="speaker_thumb">
+            <img src="../assets/img/speakers/3.png" alt="">
+            <div class="hover_overlay">
+              <div class="social_icon">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="speaker_name text-center">
+            <h3>Palestrante</h3>
+            <p>Developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-5 offset-xl-2 col-md-6">
+        <div class="single_speaker">
+          <div class="speaker_thumb">
+            <img src="../assets/img/speakers/2.png" alt="">
+            <div class="hover_overlay">
+              <div class="social_icon">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="speaker_name text-center">
+            <h3>Palestrante</h3>
+            <p>Developer</p>
+          </div>
+        </div>
+        <div class="single_speaker">
+          <div class="speaker_thumb">
+            <img src="../assets/img/speakers/1.png" alt="">
+            <div class="hover_overlay">
+              <div class="social_icon">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="speaker_name text-center">
+            <h3>Palestrante</h3>
+            <p>Developer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- speakers_end-->
+<!-- event_area_start -->
+<div class="event_area" id="programacao">
+  <h1 class="vr_text d-none d-lg-block">Programação</h1>
+  <div class="container">
+    <div class="double_line">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3">
+          <div class="date">
+            <h3>20 Dez 2020</h3>
+          </div>
+        </div>
+        <div class="col-xl-9 col-lg-9">
+          <div class="single_speaker">
+            <img src="../assets/img/speakers/seaker1.png" alt="">
+            <div class="speaker-name">
+              <div class="heading d-flex justify-content-between align-items-center">
+                <span>Palestrante</span>
+                <div class="time">
+                  10h00
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis pellentesque volutpat.
+              </p>
+            </div>
+          </div>
+          <div class="single_speaker">
+            <img src="../assets/img/speakers/seaker2.png" alt="">
+            <div class="speaker-name">
+              <div class="heading d-flex justify-content-between align-items-center">
+                <span>Palestrante</span>
+                <div class="time">
+                  12h00
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis pellentesque volutpat.
+              </p>
+            </div>
+          </div>
+          <div class="single_speaker">
+            <img src="../assets/img/speakers/seaker3.png" alt="">
+            <div class="speaker-name">
+              <div class="heading d-flex justify-content-between align-items-center">
+                <span>Palestrante</span>
+                <div class="time">
+                  13h00
+                </div>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis pellentesque volutpat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-3 col-lg-3">
+        <div class="date">
+          <h3>21 Dec 2020</h3>
+        </div>
+      </div>
+      <div class="col-xl-9 col-lg-9">
+        <div class="single_speaker">
+          <img src="../assets/img/speakers/seaker4.png" alt="">
+          <div class="speaker-name">
+            <div class="heading d-flex justify-content-between align-items-center">
+              <span>Palestrante</span>
+              <div class="time">
+                10h00
+              </div>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis pellentesque volutpat.
+            </p>
+          </div>
+        </div>
+        <div class="single_speaker">
+          <img src="../assets/img/speakers/seaker5.png" alt="">
+          <div class="speaker-name">
+            <div class="heading d-flex justify-content-between align-items-center">
+              <span>Palestrante</span>
+              <div class="time">
+                11h00
+              </div>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis pellentesque volutpat.
+            </p>
+          </div>
+        </div>
+        <div class="single_speaker">
+          <img src="../assets/img/speakers/seaker6.png" alt="">
+          <div class="speaker-name">
+            <div class="heading d-flex justify-content-between align-items-center">
+              <span>Palestrante</span>
+              <div class="time">
+                12h00
+              </div>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus venenatis pellentesque volutpat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- event_area_end -->
+<!-- footer_start -->
+<footer class="footer footer_bg_1">
+  <div class="circle_ball d-none d-lg-block">
+    <img src="../assets/img/banner/footer_ball.png" alt="">
+  </div>
+  <div class="footer_top">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-4 col-md-4 col-lg-4">
+          <div class="footer_widget">
+            <h3 class="footer_title">
+              Follow Us
+            </h3>
+            <ul>
+              <li><a target="_blank" href="#">Facebook</a></li>
+              <li><a target="_blank" href="#">Twitter</a></li>
+              <li><a target="_blank" href="#">Instagram</a></li>
+              <li><a target="_blank" href="#">Youtube</a></li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-4 col-lg-4">
+          <div class="footer_widget">
+            <h3 class="footer_title">
+              Links
+            </h3>
+            <ul>
+              <li><a target="_blank" href="#home">Home</a></li>
+              <li><a target="_blank" href="#palestrantes">Palestrantes</a></li>
+              <li><a target="_blank" [routerLink]='["/inscricao"]'>Inscreva-se</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-4 col-lg-4">
+          <div class="footer_widget">
+            <h3 class="footer_title">
+              Contato
+            </h3>
+            <p>
+              contato@contato.com <br>
+              11 1234-0000
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copy-right_text">
+    <div class="container">
+      <div class="footer_border"></div>
+      <div class="row">
+        <div class="col-xl-12">
+          <p class="copy_right text-center" style="font-size:12px;">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</footer>
+<!-- footer_end -->

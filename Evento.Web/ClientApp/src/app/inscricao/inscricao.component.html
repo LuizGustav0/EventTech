@@ -1,0 +1,132 @@
+
+<div class="container-contact100">
+  <div class="wrap-contact100" style="margin-top: 18px;">
+    <form class="contact100-form validate-form">
+      <span class="contact100-form-title">
+        Obrigado pelo interesse :)
+      </span>
+
+
+      <!-- Recurso para deficientes visuais -->
+      <label for="inputNome" class="sr-only">Nome</label>
+      <input type="text" id="inputNome"
+             name="nome" placeholder="Nome"
+             class="form-control mb-2"
+             [ngClass]="{
+            'is-invalid': nome.invalid && (nome.dirty || nome.touched),
+            'is-valid': nome.valid && (nome.dirty || nome.touched)
+           }"
+             [(ngModel)]="convidado.nome"
+             #nome="ngModel"
+             required />
+
+      <div class="invalid-feedback mb-2 text-left" *ngIf="nome.invalid && (nome.dirty || nome.touched)">
+        <div *ngIf="nome.errors.required">
+          Nome é de preenchimento obrigatório
+        </div>
+      </div>
+
+      <!-- Recurso para deficientes visuais -->
+      <label for="inputEmail" class="sr-only">Email</label>
+      <input type="email" id="inputEmail"
+             name="email" placeholder="Informe o seu Email"
+             class="form-control mb-2"
+             [ngClass]="{
+            'is-invalid': email.invalid && (email.dirty || email.touched),
+            'is-valid': email.valid && (email.dirty || email.touched)
+           }"
+             [(ngModel)]="convidado.email"
+             #email="ngModel"
+             email
+             required />
+
+
+      <div class="invalid-feedback mb-2 text-left" *ngIf="email.invalid && (email.dirty || email.touched)">
+        <div *ngIf="email.errors.required">
+          Email é de preenchimento obrigatório
+        </div>
+        <div *ngIf="email.errors.email">
+          Email no formato inválido
+        </div>
+      </div>
+
+
+
+
+      <label for="inputCelular" class="sr-only">Celular</label>
+      <input type="text" id="inputCelular"
+             name="celular" placeholder="Celular"
+             class="form-control mb-2"
+             [ngClass]="{
+            'is-invalid': celular.invalid && (celular.dirty || celular.touched),
+            'is-valid': celular.valid && (celular.dirty || celular.touched)
+           }"
+             [(ngModel)]="convidado.celular"
+             #celular="ngModel"
+             required />
+
+      <div class="invalid-feedback mb-2 text-left" *ngIf="celular.invalid && (celular.dirty || celular.touched)">
+        <div *ngIf="celular.errors.required">
+          Celular é de preenchimento obrigatório
+        </div>
+      </div>
+
+
+
+      <label for="inputEmpresa" class="sr-only">Empresa </label>
+      <input type="text" id="inputEmpresa"
+             name="empresa" placeholder="Empresa"
+             class="form-control mb-2"
+             [ngClass]="{
+        'is-invalid': empresa.invalid && (empresa.dirty || empresa.touched),
+        'is-valid': empresa.valid && (empresa.dirty || empresa.touched)
+       }"
+             [(ngModel)]="convidado.empresa"
+             #empresa="ngModel"
+             required />
+
+      <div class="invalid-feedback mb-2 text-left" *ngIf="empresa.invalid && (empresa.dirty || empresa.touched)">
+        <div *ngIf="empresa.errors.required">
+          Empresa ou instuição de ensino é de preenchimento obrigatório
+        </div>
+      </div>
+
+
+      <label for="inputCargo" class="sr-only">Cargo/profissão</label>
+      <input type="text" id="inputCargo"
+             name="cargo" placeholder="Cargo"
+             class="form-control mb-2"
+             [ngClass]="{
+        'is-invalid': cargo.invalid && (cargo.dirty || cargo.touched),
+        'is-valid': cargo.valid && (cargo.dirty || cargo.touched)
+       }"
+             [(ngModel)]="convidado.cargo"
+             #cargo="ngModel"
+             required />
+
+      <div class="invalid-feedback mb-2 text-left" *ngIf="cargo.invalid && (cargo.dirty || cargo.touched)">
+        <div *ngIf="cargo.errors.required">
+          Cargo/profissão é de preenchimento obrigatório
+        </div>
+      </div>
+
+
+
+
+      <div class="container-contact100-form-btn">
+        <div class="wrap-contact100-form-btn">
+          <div class="contact100-form-bgbtn"></div>
+          <button class="contact100-form-btn">
+            <span>
+              Finalizar inscrição
+              <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+

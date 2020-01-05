@@ -7,9 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { PalestrantesComponent } from './palestrantes/palestrantes.component';
-import { ProgramacaoComponent } from './programacao/programacao.component';
-import { FooterComponent } from './footer/footer.component';
+import { InscricaoComponent } from './inscricao/inscricao.component';
 
 
 
@@ -18,9 +16,8 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    PalestrantesComponent,
-    ProgramacaoComponent,
-    FooterComponent
+    InscricaoComponent,
+
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -28,9 +25,7 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'palestrantes', component: PalestrantesComponent },
-      { path: 'programacao', component: ProgramacaoComponent },
-      { path: 'footer', component: FooterComponent },
+      { path: 'inscricao', component: InscricaoComponent },
     ])
   ],
   providers: [],
