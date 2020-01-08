@@ -1,10 +1,15 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Evento.Repositorio.Contexto;
+using Evento.Dominio.Contratos;
+using Evento.Repositorio.Repositorios;
 
 namespace Evento.Web
 {
@@ -12,7 +17,10 @@ namespace Evento.Web
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder();
+            builder.AddJsonFile("config.json", optional: false, reloadOnChange: true);
+
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -20,7 +28,18 @@ namespace Evento.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
+                .AddJsonOptions(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            var connectionString = Configuration.GetConnectionString("EventoDB");
+            services.AddDbContext<EventoContexto>(option =>
+                                                        option.UseLazyLoadingProxies()
+                                                                    .UseMySql(connectionString, m =>
+                                                                             m.MigrationsAssembly("Evento.Repositorio")));
+
+            services.AddScoped<IConvidadoRepositorio, ConvidadoRepositorio>();
+
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

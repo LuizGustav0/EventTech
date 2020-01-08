@@ -1,0 +1,6 @@
+{
+  "ConnectionStrings": {
+    "EventoDB": "server=localhost;userid=root;database=EventoDB"
+  }
+
+}
